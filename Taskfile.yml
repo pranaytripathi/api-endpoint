@@ -15,7 +15,7 @@ tasks:
   build:
     cmds:
       - go build cmd/main.go
-  run:
+  dev:
     cmds:
       - go run cmd/main.go
   generate-templates:
