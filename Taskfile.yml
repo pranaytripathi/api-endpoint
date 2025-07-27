@@ -1,0 +1,23 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+  mod:
+    go mod tidy
+  build:
+    cmds:
+      - go build cmd/main.go
+  run:
+    cmds:
+      - go run cmd/main.go
+  generate-templates:
+    cmds:
+      - $GOPATH/bin/templ generate

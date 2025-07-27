@@ -1,0 +1,22 @@
+package templates
+
+templ Index() {
+    <!DOCTYPE html>
+    <html lang="en">
+	    <head>
+		    <meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>HTMX Demo</title>
+			<script src="https://unpkg.com/htmx.org"></script>
+		</head>
+		<body>
+             <h1>HTMX Demo</h1>
+             <div id="content">
+                <p>Click the button to fetch updated content!</p>
+             </div>
+             <button hx-get="/update" hx-target="#content" hx-swap="innerHTML">
+             Get Updated Content
+             </button>
+		</body>
+	</html>
+}
